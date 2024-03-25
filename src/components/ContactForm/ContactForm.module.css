@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #3b2b2d;
+}
+
+.input {
+  font-size: 16px;
+  padding: 4px;
+  border: 1px #705257 solid;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #705257c0;
+  color: white;
+  border: 1px transparent solid;
+  border-radius: 4px;
+  width: 150px;
+  align-self: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #705257;
+}
+
+.error {
+  color: #ff4500;
+}

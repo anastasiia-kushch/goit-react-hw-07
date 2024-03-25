@@ -1,0 +1,48 @@
+.div {
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #705257;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.icon {
+  margin-right: 10px;
+  fill: #705257;
+  stroke: #705257;
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.info p {
+  color: #3b2b2d;
+}
+
+.button {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #705257c0;
+  color: white;
+  border: 1px transparent solid;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #705257;
+}
+
+.data {
+  display: flex;
+  flex-wrap: wrap;
+}
