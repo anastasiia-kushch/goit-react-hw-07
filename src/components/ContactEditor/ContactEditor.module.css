@@ -1,0 +1,49 @@
+.input {
+  width: 100px;
+  height: fit-content;
+  font-size: 16px;
+  padding: 4px;
+  border: 1px #705257 solid;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.inputsDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputIconDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 28px;
+  background-color: #705257c0;
+  color: white;
+  border: 1px transparent solid;
+  border-radius: 4px;
+}
+
+.saveButton:hover,
+.saveButton:focus {
+  background-color: #705257;
+}
+
+.icon {
+  margin-right: 10px;
+  fill: #705257;
+  stroke: #705257;
+}

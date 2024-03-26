@@ -9,17 +9,17 @@ export default function ContactList() {
   const contacts = useSelector(selectContacts);
   const filters = useSelector(selectNameFilter);
 
-  const reversedContacts = contacts.slice().reverse();
+  // const filteredContacts = useSelector(selectFilteredContacts());
+  // const reversedContacts = filteredContacts && filteredContacts.slice().reverse();
 
-  const filteredContacts = filters
-    ? reversedContacts.filter((contact) =>
-        contact.name.toLowerCase().includes(filters.name)
-      )
-    : reversedContacts;
+  const filteredContacts = contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(filters.name)
+  );
+    const reversedContacts = filteredContacts.slice().reverse();
 
   return (
     <ul className={css.ul}>
-      {filteredContacts.map((contact) => (
+      {reversedContacts.map((contact) => (
         <li key={contact.id}>
           <Contact contact={contact} />
         </li>
