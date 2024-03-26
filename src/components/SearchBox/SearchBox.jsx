@@ -4,6 +4,7 @@ import { selectNameFilter, setFilter } from '../../redux/filtersSlice';
 
 export default function SearchBox() {
   const dispatch = useDispatch();
+
   const { value } = useSelector(selectNameFilter);
   const habdleChange = (e) => {
     dispatch(setFilter(e.target.value));

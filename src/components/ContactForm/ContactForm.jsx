@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 import css from '../ContactForm/ContactForm.module.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const initialValues = {
   name: '',
@@ -16,8 +17,7 @@ const FormSchema = Yup.object().shape({
     .min(3, 'Too Short!')
     .max(50, 'Too Long!')
     .required('Required'),
-  number: Yup.string()
-    .required('Required'),
+  number: Yup.string().required('Required'),
 });
 
 export default function ContactForm() {
@@ -31,7 +31,10 @@ export default function ContactForm() {
         name: values.name,
         number: values.number,
       })
-    );
+    )
+      .unwrap()
+      .then(() => toast.success('Contact added!'))
+      .catch(() => toast.error('Oops... Try again!'));
     actions.resetForm();
   };
 
@@ -72,6 +75,7 @@ export default function ContactForm() {
         <button type="submit" className={css.button}>
           Add contact
         </button>
+        <Toaster />
       </Form>
     </Formik>
   );

@@ -21,8 +21,14 @@
 }
 
 .info p {
-  color: #3b2b2d;
+  color: #705257;
+  cursor: pointer;
 }
+
+.info p:hover {
+  color: #bd9ea4; 
+}
+
 
 .button {
   position: absolute;

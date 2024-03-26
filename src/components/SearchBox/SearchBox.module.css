@@ -1,7 +1,7 @@
 .div {
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
+  margin-top: 16px;
   font-style: 16px;
 }
 

@@ -22,7 +22,9 @@ const slice = createSlice({
       })
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.loading = false;
-        state.items = action.payload;
+        state.items = action.payload.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
       })
       .addCase(fetchContacts.rejected, (state) => {
         state.loading = false;
@@ -72,6 +74,7 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
+
 export const selectContacts = (state) => state.contacts.items;
 export const selectLoading = (state) => state.contacts.loading;
 export const selectError = (state) => state.contacts.error;
@@ -79,7 +82,8 @@ export const selectError = (state) => state.contacts.error;
 export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (items, filters) => {
-
-    return items.filter((item) => item.name.toLowerCase().includes(filters.name));
+    return items.filter((item) =>
+      item.name.toLowerCase().includes(filters.name)
+    );
   }
 );

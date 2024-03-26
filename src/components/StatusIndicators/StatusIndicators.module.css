@@ -1,33 +1,31 @@
-.form {
+.loader {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  color: #3b2b2d;
-  margin-top: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
 }
 
-.input {
-  font-size: 16px;
-  padding: 4px;
-  border: 1px #705257 solid;
-  border-radius: 4px;
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 80px;
+}
+
+.p {
+    font-size: 20px;
 }
 
 .button {
-  margin-top: 5px;
   background-color: #705257c0;
   color: white;
   border: 1px transparent solid;
   border-radius: 4px;
-  width: 150px;
+  width: 160px;
   align-self: center;
 }
 
 .button:hover,
 .button:focus {
   background-color: #705257;
-}
-
-.error {
-  color: #ff4500;
 }

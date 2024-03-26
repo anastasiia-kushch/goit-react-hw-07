@@ -6,6 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contactsOps';
 import { selectError, selectLoading } from '../../redux/contactsSlice';
+import {
+  Loader,
+  ErrorComponent,
+} from '../StatusIndicators/StatusIndicators';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,8 +22,8 @@ function App() {
 
   return (
     <div>
-      {loading && <p>Loading...</p>}
-      {error && <p>Oops! Something went wrong...</p>}
+      {loading && <Loader />}
+      {error && <ErrorComponent />}
       {!loading && !error && (
         <div className={css.div}>
           <h1>Phonebook</h1>
