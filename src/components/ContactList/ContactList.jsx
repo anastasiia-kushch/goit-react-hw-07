@@ -18,11 +18,3 @@ export default function ContactList() {
   );
 }
 
-// import { selectContacts } from '../../redux/contactsSlice';
-// import { selectNameFilter } from '../../redux/filtersSlice';
-// const contacts = useSelector(selectContacts);
-// const filters = useSelector(selectNameFilter);
-// const filteredContacts = contacts.filter((contact) =>
-//   contact.name.toLowerCase().includes(filters.name)
-// );
-// const reversedContacts = filteredContacts.slice().reverse();
