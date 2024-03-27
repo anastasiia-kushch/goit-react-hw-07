@@ -2,10 +2,6 @@
 
 This project is a web application called "PhoneBook", designed to organize and manage users' contact lists. The application provides a basic set of functions such as adding, viewing, editing, and deleting contacts. Contacts in the list are automatically sorted in alphabetical order for ease of use.
 
-# Files
-
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
-
 ## Key Features
 
 - **Adding Contacts:** Users can add new contacts by entering their name and phone number through the application interface.
