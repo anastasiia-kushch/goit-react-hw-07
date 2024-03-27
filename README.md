@@ -16,7 +16,7 @@ This project is a web application called "PhoneBook", designed to organize and m
 - **State Management:** Redux
 - **Interface:** HTML and CSS are used to create the user interface.
 - **Sorting:** Contacts are automatically sorted in alphabetical order using built-in JavaScript methods.
-- **Data Storage:** Contact data is generated and stored on the mockapi.io server.
+- **Data Storage:** Contact data is generated and stored on the mockapi.io [mockapi.io](https://mockapi.io) server.
 
 ## Running the Application
 
